@@ -2,7 +2,6 @@ import { graphqlHTTP } from "express-graphql"
 import { buildSchema, assertInputType } from "graphql"
 import express from "express"
 
-// Construct a schema, using GraphQL schema language
 let restaurants = [
   {
     id: 1,
@@ -89,7 +88,6 @@ type Mutation{
   editrestaurant(id: Int!, name: String!): restaurant
 }
 `);
-// The root provides a resolver function for each API endpoint
 
 var root = {
   restaurant: (arg) => restaurants[arg.id],
