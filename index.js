@@ -3,7 +3,7 @@ import { buildSchema, assertInputType } from "graphql"
 import express from "express"
 
 // Construct a schema, using GraphQL schema language
-const restaurants = [
+let restaurants = [
   {
     id: 1,
     name: "WoodsHill ",
